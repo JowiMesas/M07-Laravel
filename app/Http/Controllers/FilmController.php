@@ -89,7 +89,7 @@ class FilmController extends Controller
         $films = FilmController::readFilms();
 
         foreach ($films as $film) {
-            if ($film['year'] >= $year)
+            if ($film['year'] == $year)
                 $new_films[] = $film;
         }
         return view('films.list', ["films" => $new_films, "title" => $title]);
