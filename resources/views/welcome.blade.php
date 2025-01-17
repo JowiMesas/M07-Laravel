@@ -21,6 +21,7 @@
         <li><a href={{route('filmsByYear',['year' => '2000'])}}>Pelis Por Año 2000</a> </li>
         <li><a href={{route('filmsByGenre',['genre' => 'Drama'])}}>Pelis Por Genero</a> </li>
         <li><a href="/filmout/sortFilms">Peliculas Descendientes</a></li>
+        <li><a href="/filmout/countFilms">Contar Peliculas</a></li>
     </ul>
     <!-- Add Bootstrap JS and Popper.js (required for Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

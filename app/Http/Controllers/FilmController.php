@@ -119,4 +119,16 @@ class FilmController extends Controller
         usort($new_films, function($a, $b) {return $a["year"] < $b["year"];});
         return view('films.list', ["films" => $new_films, "title" => $title]);
     }
+    public function countFilms ()
+    {
+        $new_films = [];
+
+        $title = "Listado de Pelis Descendentes";
+        $films = FilmController::readFilms();
+        foreach ($films as $film) {
+                $new_films[] = $film;
+        }
+        $count = count($new_films);
+        return view('films.count', ["count" => $count, "title" => $title]);
+    }
 }
