@@ -131,4 +131,7 @@ class FilmController extends Controller
         $count = count($new_films);
         return view('films.count', ["count" => $count, "title" => $title]);
     }
+    public function createFilm() {
+        
+    }
 }
