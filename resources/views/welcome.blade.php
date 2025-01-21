@@ -18,7 +18,7 @@
     <ul>
         <li><a href=/filmout/oldFilms>Pelis antiguas</a></li>
         <li><a href=/filmout/newFilms>Pelis nuevas</a></li>
-        <li><a href={{route('filmsByYear',['year' => '2000'])}}>Pelis Por Año 2000</a> </li>
+        <li><a href={{route('filmsByYear',['year' => '1985'])}}>Pelis Por Año 1985</a> </li>
         <li><a href={{route('filmsByGenre',['genre' => 'Drama'])}}>Pelis Por Genero</a> </li>
         <li><a href="/filmout/sortFilms">Peliculas Descendientes</a></li>
         <li><a href="/filmout/countFilms">Contar Peliculas</a></li>
