@@ -18,12 +18,12 @@
     <ul>
         <li><a href=/filmout/oldFilms>Pelis antiguas</a></li>
         <li><a href=/filmout/newFilms>Pelis nuevas</a></li>
-        <li><a href={{route('filmsByYear',['year' => '1985'])}}>Pelis Por Año 1985</a> </li>
-        <li><a href={{route('filmsByGenre',['genre' => 'Drama'])}}>Pelis Por Genero</a> </li>
+        <li><a href="/filmout/listFilms">Lista de Peliculas</a></li>
         <li><a href="/filmout/sortFilms">Peliculas Descendientes</a></li>
         <li><a href="/filmout/countFilms">Contar Peliculas</a></li>
     </ul>
-    <form action="" method="post">
+    <form action="{{action('App\Http\Controllers\FilmController@createFilm')}}" method="post">
+        {{csrf_field()}}
         <h1 class="mt-4">Añadir Pelicula</h1>
         <label for="nombrePelicula">
             Nombre: 

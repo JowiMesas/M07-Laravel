@@ -15,7 +15,7 @@ class ValidateUrl
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $validateUrl = $request->route('validateUrl');
+        $validateUrl = $request->imagenUrl;
         if(!filter_var($validateUrl, FILTER_VALIDATE_URL)) {
             return redirect('/');
         }
