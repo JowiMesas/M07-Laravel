@@ -22,6 +22,9 @@
         <li><a href="/filmout/sortFilms">Peliculas Descendientes</a></li>
         <li><a href="/filmout/countFilms">Contar Peliculas</a></li>
     </ul>
+    @if (session('peliculaExistente'))
+    <span style="color:red; font-weight: bold;">{{session('peliculaExistente')}}</span>
+    @endif
     <form action="{{action('App\Http\Controllers\FilmController@createFilm')}}" method="post">
         {{csrf_field()}}
         <h1 class="mt-4">Añadir Pelicula</h1>
@@ -52,8 +55,11 @@
         <br> 
         <label for="imagenUrl">
             Imagen URL:
-            <input type="url" name="imagenUrl" required>
+            <input type="text" name="imagenUrl" required>
         </label>
+        @error('errorUrl')
+            <span style="color: red; font-weight: bold; ">{{$message}}</span>
+        @enderror
         <br>
         <input type="submit" value="Enviar">
     </form>

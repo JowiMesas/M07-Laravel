@@ -17,7 +17,8 @@ class ValidateUrl
     {
         $validateUrl = $request->imagenUrl;
         if(!filter_var($validateUrl, FILTER_VALIDATE_URL)) {
-            return redirect('/');
+            return redirect('/')->withErrors(['errorUrl' => "La URL no esta en un formato correcto!"]);
+
         }
         return $next($request);
     }
