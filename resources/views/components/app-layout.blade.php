@@ -12,8 +12,7 @@
     <header>
         <img src="/img/header.jpg" alt="Header cinema">
     </header>
-    {{-- {{$slot}} --}}
-    @yield('')
+    {{$slot}}
     <footer>
         <div class="footer-div">
             <p>© 2024 Cinema Joel Mesas. All rights reserved </p>
