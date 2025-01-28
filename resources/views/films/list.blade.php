@@ -1,4 +1,6 @@
-<h1>{{$title}}</h1>
+
+<x-app-layout>
+    <h1>{{$title}}</h1>
 
 @if(empty($films))
     <FONT COLOR="red">No se ha encontrado ninguna película</FONT>
@@ -27,3 +29,4 @@
     </table>
 </div>
 @endif
+</x-app-layout>
