@@ -1,5 +1,5 @@
 
 <x-app-layout>
-    <h1>{{$title}}</h1>
-    <h2>Total de Peliculas: {{$count}} </h2>
+    <h1 class="text-dark">{{$title}}</h1>
+    <h2 class="text-dark">Total de Peliculas: {{$count}} </h2>
 </x-app-layout>

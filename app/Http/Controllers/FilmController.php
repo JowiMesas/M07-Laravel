@@ -125,7 +125,7 @@ class FilmController extends Controller
     {
         $new_films = [];
 
-        $title = "Listado de Pelis Descendentes";
+        $title = "Total de Peliculas:";
         $films = FilmController::readFilms();
         foreach ($films as $film) {
                 $new_films[] = $film;
@@ -143,7 +143,7 @@ class FilmController extends Controller
             "img_url" => $request->imagenUrl
         ];
         if(FilmController::isFilm($nuevaPelicula["name"])) {
-            session()->flash('peliculaExistente', 'Esta Pelicula ya existe!');
+            session()->flash('peliculaExistente', '⚠️ Esta Pelicula ya existe!');
             return redirect('/');
 
         }
