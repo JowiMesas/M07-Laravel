@@ -3,7 +3,6 @@ header img {
     height: 150px;
 }
 footer {
-    position: sticky;
     bottom: 0;
     background-color: lightblue;
     text-align: center;
